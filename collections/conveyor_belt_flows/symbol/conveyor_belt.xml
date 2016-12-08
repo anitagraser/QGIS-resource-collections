@@ -1,0 +1,138 @@
+<!DOCTYPE qgis_style>
+<qgis_style version="1">
+  <symbols>
+    <symbol alpha="1" clip_to_extent="1" type="line" name="conveyor_belt">
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Line"/>
+        <prop k="geometryModifier" v="  line_merge( intersection(&#xd;&#xa; exterior_ring(   convex_hull( &#xd;&#xa;   union( &#xd;&#xa;   buffer(  start_point( $geometry), &quot;start_size&quot; ),&#xd;&#xa;  buffer(  end_point( $geometry),500000)&#xd;&#xa;  )&#xd;&#xa; )),&#xd;&#xa;  exterior_ring( buffer(  start_point( $geometry), &quot;start_size&quot; ))&#xd;&#xa; ))"/>
+        <symbol alpha="1" clip_to_extent="1" type="line" name="@conveyor_belt@0">
+          <layer pass="0" class="MarkerLine" locked="0">
+            <prop k="interval" v="8.4"/>
+            <prop k="interval_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="interval_unit" v="MM"/>
+            <prop k="offset" v="-1.4"/>
+            <prop k="offset_along_line" v="0"/>
+            <prop k="offset_along_line_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_along_line_unit" v="MM"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="placement" v="interval"/>
+            <prop k="rotate" v="1"/>
+            <symbol alpha="1" clip_to_extent="1" type="marker" name="@@conveyor_belt@0@0">
+              <layer pass="0" class="SimpleMarker" locked="0">
+                <prop k="angle" v="45"/>
+                <prop k="color" v="255,0,0,255"/>
+                <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="name" v="line"/>
+                <prop k="offset" v="0,0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="0,0,0,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0.4"/>
+                <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="scale_method" v="diameter"/>
+                <prop k="size" v="1"/>
+                <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="size_unit" v="MM"/>
+                <prop k="vertical_anchor_point" v="1"/>
+              </layer>
+              <layer pass="0" class="SimpleMarker" locked="0">
+                <prop k="angle" v="90"/>
+                <prop k="color" v="255,0,0,255"/>
+                <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="name" v="line"/>
+                <prop k="offset" v="0.39999999999999997,-0.60000000000000009"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="0,0,0,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0.4"/>
+                <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="scale_method" v="diameter"/>
+                <prop k="size" v="2"/>
+                <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="size_unit" v="MM"/>
+                <prop k="vertical_anchor_point" v="1"/>
+              </layer>
+            </symbol>
+          </layer>
+        </symbol>
+      </layer>
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Fill"/>
+        <prop k="geometryModifier" v="  convex_hull( &#xd;&#xa; &#xd;&#xa;  union( &#xd;&#xa;  &#xd;&#xa;  buffer(  start_point( $geometry), &quot;start_size&quot; ),&#xd;&#xa;  buffer(  end_point( $geometry),500000)&#xd;&#xa;  )&#xd;&#xa; )"/>
+        <symbol alpha="1" clip_to_extent="1" type="fill" name="@conveyor_belt@1">
+          <layer pass="0" class="SimpleFill" locked="0">
+            <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="color" v="0,0,255,0"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0.26"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="style" v="solid"/>
+          </layer>
+        </symbol>
+      </layer>
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Fill"/>
+        <prop k="geometryModifier" v="buffer(  start_point( $geometry), &quot;start_size&quot; )"/>
+        <symbol alpha="1" clip_to_extent="1" type="fill" name="@conveyor_belt@2">
+          <layer pass="0" class="ShapeburstFill" locked="0">
+            <prop k="blur_radius" v="4"/>
+            <prop k="color" v="227,26,28,255"/>
+            <prop k="color1" v="0,0,255,255"/>
+            <prop k="color2" v="0,255,0,255"/>
+            <prop k="color_dd_active" v="1"/>
+            <prop k="color_dd_expression" v="&quot;color&quot;"/>
+            <prop k="color_dd_field" v="color"/>
+            <prop k="color_dd_useexpr" v="1"/>
+            <prop k="color_type" v="0"/>
+            <prop k="discrete" v="0"/>
+            <prop k="distance_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="distance_unit" v="MM"/>
+            <prop k="gradient_color2" v="255,255,255,0"/>
+            <prop k="ignore_rings" v="0"/>
+            <prop k="max_distance" v="2"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="use_whole_shape" v="0"/>
+          </layer>
+        </symbol>
+      </layer>
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Fill"/>
+        <prop k="geometryModifier" v="buffer(  end_point( $geometry),500000)"/>
+        <symbol alpha="1" clip_to_extent="1" type="fill" name="@conveyor_belt@3">
+          <layer pass="0" class="ShapeburstFill" locked="0">
+            <prop k="blur_radius" v="4"/>
+            <prop k="color" v="0,0,0,255"/>
+            <prop k="color1" v="0,0,255,255"/>
+            <prop k="color2" v="0,255,0,255"/>
+            <prop k="color_type" v="0"/>
+            <prop k="discrete" v="0"/>
+            <prop k="distance_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="distance_unit" v="MM"/>
+            <prop k="gradient_color2" v="0,0,0,0"/>
+            <prop k="ignore_rings" v="0"/>
+            <prop k="max_distance" v="1"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="use_whole_shape" v="0"/>
+          </layer>
+        </symbol>
+      </layer>
+    </symbol>
+  </symbols>
+  <colorramps/>
+</qgis_style>
