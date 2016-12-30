@@ -1,0 +1,274 @@
+<!DOCTYPE qgis_style>
+<qgis_style version="1">
+  <symbols>
+    <symbol alpha="1" clip_to_extent="1" type="line" name="curved_arrow">
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Fill"/>
+        <prop k="geometryModifier" v="buffer(&#xd;&#xa; end_point( $geometry),&#xd;&#xa; 10000&#xd;&#xa; )"/>
+        <symbol alpha="1" clip_to_extent="1" type="fill" name="@curved_arrow@0">
+          <layer pass="0" class="SimpleFill" locked="0">
+            <prop k="arrow_start_width_dd_active" v="1"/>
+            <prop k="arrow_start_width_dd_expression" v="scale_linear(&quot;weight&quot;,0,10,0.1,3)"/>
+            <prop k="arrow_start_width_dd_field" v="weight"/>
+            <prop k="arrow_start_width_dd_useexpr" v="1"/>
+            <prop k="arrow_width_dd_active" v="1"/>
+            <prop k="arrow_width_dd_expression" v="scale_linear(&quot;weight&quot;,0,10,0.1,3)"/>
+            <prop k="arrow_width_dd_field" v="weight"/>
+            <prop k="arrow_width_dd_useexpr" v="1"/>
+            <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="color" v="255,255,255,255"/>
+            <prop k="head_length_dd_active" v="1"/>
+            <prop k="head_length_dd_expression" v="scale_linear(&quot;weight&quot;,0,10,0.1,1.5)+1.5"/>
+            <prop k="head_length_dd_field" v=""/>
+            <prop k="head_length_dd_useexpr" v="1"/>
+            <prop k="head_thickness_dd_active" v="1"/>
+            <prop k="head_thickness_dd_expression" v="scale_linear(&quot;weight&quot;,0,10,0.1,1.5)+1.5"/>
+            <prop k="head_thickness_dd_field" v=""/>
+            <prop k="head_thickness_dd_useexpr" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_dd_active" v="0"/>
+            <prop k="offset_dd_expression" v="inf*(IF ( &quot;FROM&quot; !=  &quot;TO&quot; ,&#xd;&#xa;coalesce(scale_exp(&quot;COUNT&quot;, 0, 10, 0, 10, 1), 0),0))"/>
+            <prop k="offset_dd_field" v="COUNT"/>
+            <prop k="offset_dd_useexpr" v="1"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0.26"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="style" v="solid"/>
+            <prop k="width_dd_active" v="1"/>
+            <prop k="width_dd_expression" v="IF ( &quot;FROM&quot; !=  &quot;TO&quot; ,&#xd;&#xa;coalesce(scale_exp(&quot;COUNT&quot;, 0, 10, 0, 10, 1), 0),0)"/>
+            <prop k="width_dd_field" v="COUNT"/>
+            <prop k="width_dd_useexpr" v="1"/>
+          </layer>
+        </symbol>
+      </layer>
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Fill"/>
+        <prop k="geometryModifier" v="buffer(&#xd;&#xa; start_point( $geometry),&#xd;&#xa; 10000&#xd;&#xa; )"/>
+        <symbol alpha="1" clip_to_extent="1" type="fill" name="@curved_arrow@1">
+          <layer pass="0" class="SimpleFill" locked="0">
+            <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="color" v="255,255,255,255"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0.26"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="style" v="solid"/>
+          </layer>
+        </symbol>
+      </layer>
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Line"/>
+        <prop k="geometryModifier" v=" difference(&#xd;&#xa; difference( $geometry,&#xd;&#xa; buffer(&#xd;&#xa; start_point( $geometry),&#xd;&#xa; 10000&#xd;&#xa; )&#xd;&#xa; ),&#xd;&#xa; buffer(&#xd;&#xa; end_point( $geometry),&#xd;&#xa; 10000&#xd;&#xa; ))"/>
+        <symbol alpha="1" clip_to_extent="1" type="line" name="@curved_arrow@2">
+          <layer pass="0" class="ArrowLine" locked="0">
+            <prop k="arrow_start_width" v="1"/>
+            <prop k="arrow_start_width_dd_active" v="1"/>
+            <prop k="arrow_start_width_dd_expression" v="scale_linear(&quot;weight&quot;,1000,10000,0.8,3)* CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 1 END"/>
+            <prop k="arrow_start_width_dd_field" v=""/>
+            <prop k="arrow_start_width_dd_useexpr" v="1"/>
+            <prop k="arrow_start_width_unit" v="MM"/>
+            <prop k="arrow_start_width_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="arrow_type" v="0"/>
+            <prop k="arrow_width" v="1"/>
+            <prop k="arrow_width_dd_active" v="1"/>
+            <prop k="arrow_width_dd_expression" v="scale_linear(&quot;weight&quot;,1000,10000,0.8,3)* CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 1 END"/>
+            <prop k="arrow_width_dd_field" v=""/>
+            <prop k="arrow_width_dd_useexpr" v="1"/>
+            <prop k="arrow_width_unit" v="MM"/>
+            <prop k="arrow_width_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="head_length" v="1.5"/>
+            <prop k="head_length_dd_active" v="1"/>
+            <prop k="head_length_dd_expression" v="scale_linear(&quot;weight&quot;,1000,10000,0.1,1.5)&#xd;&#xa;+1.5&#xd;&#xa;* CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 1 END"/>
+            <prop k="head_length_dd_field" v=""/>
+            <prop k="head_length_dd_useexpr" v="1"/>
+            <prop k="head_length_unit" v="MM"/>
+            <prop k="head_length_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="head_thickness" v="1.5"/>
+            <prop k="head_thickness_dd_active" v="1"/>
+            <prop k="head_thickness_dd_expression" v="scale_linear(&quot;weight&quot;,1000,10000,0.1,1.5)&#xd;&#xa;+1.5&#xd;&#xa;* CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 1 END"/>
+            <prop k="head_thickness_dd_field" v=""/>
+            <prop k="head_thickness_dd_useexpr" v="1"/>
+            <prop k="head_thickness_unit" v="MM"/>
+            <prop k="head_thickness_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="head_type" v="0"/>
+            <prop k="is_curved" v="1"/>
+            <prop k="is_repeated" v="1"/>
+            <prop k="offset" v="0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="offset_unit_scale" v="0,0,0,0,0,0"/>
+            <symbol alpha="1" clip_to_extent="1" type="fill" name="@@curved_arrow@2@0">
+              <layer pass="0" class="SimpleFill" locked="0">
+                <prop k="border_style_dd_active" v="1"/>
+                <prop k="border_style_dd_expression" v="CASE WHEN &quot;weight&quot; &lt; 1000 THEN 'no' ELSE 'solid' END"/>
+                <prop k="border_style_dd_field" v=""/>
+                <prop k="border_style_dd_useexpr" v="1"/>
+                <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="color" v="0,0,0,255"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="offset" v="0,0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="255,255,255,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0.4"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="style" v="solid"/>
+                <prop k="width_border_dd_active" v="0"/>
+                <prop k="width_border_dd_expression" v="CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 0.4 END"/>
+                <prop k="width_border_dd_field" v=""/>
+                <prop k="width_border_dd_useexpr" v="1"/>
+              </layer>
+            </symbol>
+          </layer>
+        </symbol>
+      </layer>
+    </symbol>
+    <symbol alpha="1" clip_to_extent="1" type="line" name="curved_half_arrow">
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Fill"/>
+        <prop k="geometryModifier" v="buffer(&#xd;&#xa; end_point( $geometry),&#xd;&#xa; 10000&#xd;&#xa; )"/>
+        <symbol alpha="1" clip_to_extent="1" type="fill" name="@curved_half_arrow@0">
+          <layer pass="0" class="SimpleFill" locked="0">
+            <prop k="arrow_start_width_dd_active" v="1"/>
+            <prop k="arrow_start_width_dd_expression" v="scale_linear(&quot;weight&quot;,0,10,0.1,3)"/>
+            <prop k="arrow_start_width_dd_field" v="weight"/>
+            <prop k="arrow_start_width_dd_useexpr" v="1"/>
+            <prop k="arrow_width_dd_active" v="1"/>
+            <prop k="arrow_width_dd_expression" v="scale_linear(&quot;weight&quot;,0,10,0.1,3)"/>
+            <prop k="arrow_width_dd_field" v="weight"/>
+            <prop k="arrow_width_dd_useexpr" v="1"/>
+            <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="color" v="255,255,255,255"/>
+            <prop k="head_length_dd_active" v="1"/>
+            <prop k="head_length_dd_expression" v="scale_linear(&quot;weight&quot;,0,10,0.1,1.5)+1.5"/>
+            <prop k="head_length_dd_field" v=""/>
+            <prop k="head_length_dd_useexpr" v="1"/>
+            <prop k="head_thickness_dd_active" v="1"/>
+            <prop k="head_thickness_dd_expression" v="scale_linear(&quot;weight&quot;,0,10,0.1,1.5)+1.5"/>
+            <prop k="head_thickness_dd_field" v=""/>
+            <prop k="head_thickness_dd_useexpr" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_dd_active" v="0"/>
+            <prop k="offset_dd_expression" v="inf*(IF ( &quot;FROM&quot; !=  &quot;TO&quot; ,&#xd;&#xa;coalesce(scale_exp(&quot;COUNT&quot;, 0, 10, 0, 10, 1), 0),0))"/>
+            <prop k="offset_dd_field" v="COUNT"/>
+            <prop k="offset_dd_useexpr" v="1"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0.26"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="style" v="solid"/>
+            <prop k="width_dd_active" v="1"/>
+            <prop k="width_dd_expression" v="IF ( &quot;FROM&quot; !=  &quot;TO&quot; ,&#xd;&#xa;coalesce(scale_exp(&quot;COUNT&quot;, 0, 10, 0, 10, 1), 0),0)"/>
+            <prop k="width_dd_field" v="COUNT"/>
+            <prop k="width_dd_useexpr" v="1"/>
+          </layer>
+        </symbol>
+      </layer>
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Fill"/>
+        <prop k="geometryModifier" v="buffer(&#xd;&#xa; start_point( $geometry),&#xd;&#xa; 10000&#xd;&#xa; )"/>
+        <symbol alpha="1" clip_to_extent="1" type="fill" name="@curved_half_arrow@1">
+          <layer pass="0" class="SimpleFill" locked="0">
+            <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="color" v="255,255,255,255"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0.26"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="style" v="solid"/>
+          </layer>
+        </symbol>
+      </layer>
+      <layer pass="0" class="GeometryGenerator" locked="0">
+        <prop k="SymbolType" v="Line"/>
+        <prop k="geometryModifier" v=" difference(&#xd;&#xa; difference( $geometry,&#xd;&#xa; buffer(&#xd;&#xa; start_point( $geometry),&#xd;&#xa; 10000&#xd;&#xa; )&#xd;&#xa; ),&#xd;&#xa; buffer(&#xd;&#xa; end_point( $geometry),&#xd;&#xa; 10000&#xd;&#xa; ))"/>
+        <symbol alpha="1" clip_to_extent="1" type="line" name="@curved_half_arrow@2">
+          <layer pass="0" class="ArrowLine" locked="0">
+            <prop k="arrow_start_width" v="1"/>
+            <prop k="arrow_start_width_dd_active" v="1"/>
+            <prop k="arrow_start_width_dd_expression" v="scale_linear(&quot;weight&quot;,1000,7000,1,5)* CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 1 END"/>
+            <prop k="arrow_start_width_dd_field" v=""/>
+            <prop k="arrow_start_width_dd_useexpr" v="1"/>
+            <prop k="arrow_start_width_unit" v="MM"/>
+            <prop k="arrow_start_width_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="arrow_type" v="2"/>
+            <prop k="arrow_type_dd_active" v="1"/>
+            <prop k="arrow_type_dd_expression" v="CASE WHEN&#xd;&#xa;x(start_point( $geometry)) - x(end_point($geometry)) &lt; 0&#xd;&#xa;THEN&#xd;&#xa;1&#xd;&#xa;ELSE&#xd;&#xa;2&#xd;&#xa;END"/>
+            <prop k="arrow_type_dd_field" v=""/>
+            <prop k="arrow_type_dd_useexpr" v="1"/>
+            <prop k="arrow_width" v="1"/>
+            <prop k="arrow_width_dd_active" v="1"/>
+            <prop k="arrow_width_dd_expression" v="scale_linear(&quot;weight&quot;,1000,7000,1,5)* CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 1 END"/>
+            <prop k="arrow_width_dd_field" v=""/>
+            <prop k="arrow_width_dd_useexpr" v="1"/>
+            <prop k="arrow_width_unit" v="MM"/>
+            <prop k="arrow_width_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="head_length" v="1.5"/>
+            <prop k="head_length_dd_active" v="1"/>
+            <prop k="head_length_dd_expression" v="scale_linear(&quot;weight&quot;,1000,10000,0.1,2.5)&#xd;&#xa;+1.5&#xd;&#xa;* CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 1 END"/>
+            <prop k="head_length_dd_field" v=""/>
+            <prop k="head_length_dd_useexpr" v="1"/>
+            <prop k="head_length_unit" v="MM"/>
+            <prop k="head_length_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="head_thickness" v="1.5"/>
+            <prop k="head_thickness_dd_active" v="1"/>
+            <prop k="head_thickness_dd_expression" v="scale_linear(&quot;weight&quot;,1000,10000,0.1,2.5)&#xd;&#xa;+1.5&#xd;&#xa;* CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 1 END"/>
+            <prop k="head_thickness_dd_field" v=""/>
+            <prop k="head_thickness_dd_useexpr" v="1"/>
+            <prop k="head_thickness_unit" v="MM"/>
+            <prop k="head_thickness_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="head_type" v="0"/>
+            <prop k="is_curved" v="1"/>
+            <prop k="is_repeated" v="1"/>
+            <prop k="offset" v="0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="offset_unit_scale" v="0,0,0,0,0,0"/>
+            <symbol alpha="1" clip_to_extent="1" type="fill" name="@@curved_half_arrow@2@0">
+              <layer pass="0" class="SimpleFill" locked="0">
+                <prop k="border_style_dd_active" v="1"/>
+                <prop k="border_style_dd_expression" v="CASE WHEN &quot;weight&quot; &lt; 1000 THEN 'no' ELSE 'solid' END"/>
+                <prop k="border_style_dd_field" v=""/>
+                <prop k="border_style_dd_useexpr" v="1"/>
+                <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="color" v="255,127,0,255"/>
+                <prop k="color_dd_active" v="1"/>
+                <prop k="color_dd_expression" v="CASE &#xd;&#xa;WHEN&#xd;&#xa; &quot;weight&quot; &lt; 1000 THEN  color_rgba( 0,0,0,0)&#xd;&#xa;WHEN&#xd;&#xa;x(start_point( $geometry)) - x(end_point($geometry)) &lt; 0&#xd;&#xa;THEN&#xd;&#xa;'#1f78b4'&#xd;&#xa;ELSE&#xd;&#xa;'#ff7f00'&#xd;&#xa;END"/>
+                <prop k="color_dd_field" v=""/>
+                <prop k="color_dd_useexpr" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="offset" v="0,0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="255,255,255,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0.1"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="style" v="solid"/>
+                <prop k="width_border_dd_active" v="0"/>
+                <prop k="width_border_dd_expression" v="CASE WHEN &quot;weight&quot; &lt; 1000 THEN 0 ELSE 0.4 END"/>
+                <prop k="width_border_dd_field" v=""/>
+                <prop k="width_border_dd_useexpr" v="1"/>
+              </layer>
+            </symbol>
+          </layer>
+        </symbol>
+      </layer>
+    </symbol>
+  </symbols>
+  <colorramps/>
+</qgis_style>
